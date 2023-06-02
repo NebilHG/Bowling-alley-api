@@ -1,0 +1,61 @@
+{
+    "__export_format": 4,
+    "__export_date": "2023-05-29T00:00:00.000Z",
+    "__export_source": "insomnia.config.json",
+    "resources": [
+      {
+        "id": "req_booking_create",
+        "parentId": "fld_endpoints",
+        "name": "Create Booking",
+        "description": "",
+        "url": "http://localhost:8001/api/bowling/booking",
+        "method": "POST",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"date\": \"2023-06-01\",\n  \"time\": \"14:00\",\n  \"email\": \"user@example.com\",\n  \"numberOfPlayers\": 4,\n  \"lane\": [1, 2, 3, 4],\n  \"shoeSizes\": [8, 8, 9, 9]\n}"
+        },
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      {
+        "id": "req_booking_update",
+        "parentId": "fld_endpoints",
+        "name": "Update Booking",
+        "description": "",
+        "url": "http://localhost:8001/api/bowling/booking/:id",
+        "method": "PUT",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"date\": \"2023-06-01\",\n  \"time\": \"16:00\",\n  \"numberOfPlayers\": 4,\n  \"lane\": [5, 6, 7, 8],\n  \"shoeSizes\": [10, 10, 11, 11]\n}"
+        },
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      {
+        "id": "req_booking_retrieve",
+        "parentId": "fld_endpoints",
+        "name": "Retrieve Booking",
+        "description": "",
+        "url": "http://localhost:8001/api/bowling/booking/:bookingNumber",
+        "method": "GET",
+        "headers": {}
+      },
+      {
+        "id": "req_booking_delete",
+        "parentId": "fld_endpoints",
+        "name": "Delete Booking",
+        "description": "",
+        "url": "http://localhost:8001/api/bowling/booking/:id",
+        "method": "DELETE",
+        "headers": {}
+      }
+    ],
+    "folder": {
+      "id": "fld_endpoints",
+      "name": "Endpoints",
+      "description": ""
+    }
+  }
+  
